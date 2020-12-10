@@ -60,7 +60,7 @@ public class LockDealership implements Dealership {
         Car car = null;
         lock.lock();
         try {
-            while (cars.size() == 0) {
+            while (cars.isEmpty()) {
                 condition.await();
             }
             car = cars.remove(0);

@@ -38,7 +38,7 @@ public class WaitHall implements Hall {
     public synchronized Meal waitAndGetMeal() {
         Meal meal = null;
         try {
-            while (meals.size() == 0) {
+            while (meals.isEmpty()) {
                 wait();
             }
         } catch (InterruptedException e) {

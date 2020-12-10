@@ -39,7 +39,7 @@ public class WaitDealership implements Dealership {
 
     public synchronized Car buyCar() {
         try {
-            while (cars.size() == 0) {
+            while (cars.isEmpty()) {
                 wait();
             }
         } catch (InterruptedException e) {

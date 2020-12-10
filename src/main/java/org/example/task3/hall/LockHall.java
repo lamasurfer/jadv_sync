@@ -57,7 +57,7 @@ public class LockHall implements Hall {
         Meal meal = null;
         lock.lock();
         try {
-            while (meals.size() == 0) {
+            while (meals.isEmpty()) {
                 condition.await();
             }
             meal = meals.remove(0);

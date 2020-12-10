@@ -32,7 +32,7 @@ public class WaitKitchen implements Kitchen {
     public synchronized Meal getMeal() {
         Meal meal = null;
         try {
-            while (meals.size() == 0) {
+            while (meals.isEmpty()) {
                 wait();
             }
         } catch (InterruptedException e) {
